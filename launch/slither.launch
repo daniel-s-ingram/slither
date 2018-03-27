@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<launch>
+
+  <arg name="paused" default="false"/>
+
+  <param name="robot_description" command="cat $(find slither)/urdf/snake.urdf"/>
+
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
+    args="-urdf -model slither -param robot_description"/>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find slambot)/world/slambot.world"/>
+    <arg name="paused" value="$(arg paused)" />
+  </include>
+
+</launch>
