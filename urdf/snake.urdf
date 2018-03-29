@@ -57,7 +57,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint0-1" type="revolute">
+	<joint name="joint01" type="revolute">
 		<parent link="link0"/>
 		<child link="link1"/>
 		
@@ -66,6 +66,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint01_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint01">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint01_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link2">
 		<inertial>
@@ -94,7 +108,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint1-2" type="revolute">
+	<joint name="joint12" type="revolute">
 		<parent link="link1"/>
 		<child link="link2"/>
 		
@@ -103,6 +117,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint12_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint12">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint12_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link3">
 		<inertial>
@@ -131,7 +159,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint2-3" type="revolute">
+	<joint name="joint23" type="revolute">
 		<parent link="link2"/>
 		<child link="link3"/>
 		
@@ -140,6 +168,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint23_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint23">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint23_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link4">
 		<inertial>
@@ -168,7 +210,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint3-4" type="revolute">
+	<joint name="joint34" type="revolute">
 		<parent link="link3"/>
 		<child link="link4"/>
 		
@@ -177,6 +219,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint34_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint34">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint34_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link5">
 		<inertial>
@@ -205,7 +261,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint4-5" type="revolute">
+	<joint name="joint45" type="revolute">
 		<parent link="link4"/>
 		<child link="link5"/>
 		
@@ -214,6 +270,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint45_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint45">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint45_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link6">
 		<inertial>
@@ -242,7 +312,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint5-6" type="revolute">
+	<joint name="joint56" type="revolute">
 		<parent link="link5"/>
 		<child link="link6"/>
 		
@@ -251,6 +321,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint56_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint56">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint56_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link7">
 		<inertial>
@@ -279,7 +363,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint6-7" type="revolute">
+	<joint name="joint67" type="revolute">
 		<parent link="link6"/>
 		<child link="link7"/>
 		
@@ -288,6 +372,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint67_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint67">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint67_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link8">
 		<inertial>
@@ -316,7 +414,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint7-8" type="revolute">
+	<joint name="joint78" type="revolute">
 		<parent link="link7"/>
 		<child link="link8"/>
 		
@@ -325,6 +423,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint78_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint78">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint78_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link9">
 		<inertial>
@@ -353,7 +465,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint8-9" type="revolute">
+	<joint name="joint89" type="revolute">
 		<parent link="link8"/>
 		<child link="link9"/>
 		
@@ -362,6 +474,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint89_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint89">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint89_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link10">
 		<inertial>
@@ -390,7 +516,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint9-10" type="revolute">
+	<joint name="joint910" type="revolute">
 		<parent link="link9"/>
 		<child link="link10"/>
 		
@@ -399,6 +525,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint910_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint910">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint910_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link11">
 		<inertial>
@@ -427,7 +567,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint10-11" type="revolute">
+	<joint name="joint1011" type="revolute">
 		<parent link="link10"/>
 		<child link="link11"/>
 		
@@ -436,6 +576,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint1011_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint1011">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint1011_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link12">
 		<inertial>
@@ -464,7 +618,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint11-12" type="revolute">
+	<joint name="joint1112" type="revolute">
 		<parent link="link11"/>
 		<child link="link12"/>
 		
@@ -473,6 +627,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint1112_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint1112">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint1112_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link13">
 		<inertial>
@@ -501,7 +669,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint12-13" type="revolute">
+	<joint name="joint1213" type="revolute">
 		<parent link="link12"/>
 		<child link="link13"/>
 		
@@ -510,6 +678,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint1213_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint1213">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint1213_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link14">
 		<inertial>
@@ -538,7 +720,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint13-14" type="revolute">
+	<joint name="joint1314" type="revolute">
 		<parent link="link13"/>
 		<child link="link14"/>
 		
@@ -547,6 +729,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint1314_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint1314">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint1314_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link15">
 		<inertial>
@@ -575,7 +771,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint14-15" type="revolute">
+	<joint name="joint1415" type="revolute">
 		<parent link="link14"/>
 		<child link="link15"/>
 		
@@ -584,6 +780,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint1415_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint1415">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint1415_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link16">
 		<inertial>
@@ -612,7 +822,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint15-16" type="revolute">
+	<joint name="joint1516" type="revolute">
 		<parent link="link15"/>
 		<child link="link16"/>
 		
@@ -621,6 +831,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint1516_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint1516">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint1516_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link17">
 		<inertial>
@@ -649,7 +873,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint16-17" type="revolute">
+	<joint name="joint1617" type="revolute">
 		<parent link="link16"/>
 		<child link="link17"/>
 		
@@ -658,6 +882,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint1617_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint1617">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint1617_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link18">
 		<inertial>
@@ -686,7 +924,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint17-18" type="revolute">
+	<joint name="joint1718" type="revolute">
 		<parent link="link17"/>
 		<child link="link18"/>
 		
@@ -695,6 +933,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint1718_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint1718">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint1718_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link19">
 		<inertial>
@@ -723,7 +975,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint18-19" type="revolute">
+	<joint name="joint1819" type="revolute">
 		<parent link="link18"/>
 		<child link="link19"/>
 		
@@ -732,6 +984,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint1819_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint1819">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint1819_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 	<link name="link20">
 		<inertial>
@@ -760,7 +1026,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint19-20" type="revolute">
+	<joint name="joint1920" type="revolute">
 		<parent link="link19"/>
 		<child link="link20"/>
 		
@@ -769,6 +1035,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="-0.7853981633974483" upper="0.7853981633974483" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint1920_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint1920">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint1920_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	
 
 	<gazebo>

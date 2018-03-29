@@ -61,7 +61,7 @@
 		</collision>
 	</link>
 
-	<joint name="joint<%=i-1%>-<%=i%>" type="revolute">
+	<joint name="joint<%=i-1%><%=i%>" type="revolute">
 		<parent link="link<%=i-1%>"/>
 		<child link="link<%=i%>"/>
 		<%if i == 1%>
@@ -72,6 +72,20 @@
 		<axis xyz="0 0 1"/>
 		<limit lower="<%=-0.25*Math::PI%>" upper="<%=0.25*Math::PI%>" effort = "10.0" velocity="10.0"/>
 	</joint>
+
+	<transmission name="joint<%=i-1%><%=i%>_transmission">
+		<type>transmission_interface/SimpleTransmission</type>
+
+		<joint name="joint<%=i-1%><%=i%>">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+		</joint>
+
+		<actuator name="joint<%=i-1%><%=i%>_motor">
+			<hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+			<mechanicalReduction>1</mechanicalReduction>
+		</actuator>
+	</transmission>
+
 	<%end%>
 
 	<gazebo>
