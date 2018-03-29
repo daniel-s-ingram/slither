@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<launch>
+	<rosparam file="$(find slither)/config/controllers.yaml" command="load"/>
+
+	<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+		output="screen" ns="/slither" args="joint_state_controller
+											
+											joint01_controller
+											
+											joint12_controller
+											
+											joint23_controller
+											
+											joint34_controller
+											
+											joint45_controller
+											
+											joint56_controller
+											
+											joint67_controller
+											
+											joint78_controller
+											
+											joint89_controller
+											
+											joint910_controller
+											
+											joint1011_controller
+											
+											joint1112_controller
+											
+											joint1213_controller
+											
+											joint1314_controller
+											
+											joint1415_controller
+											
+											joint1516_controller
+											
+											joint1617_controller
+											
+											joint1718_controller
+											
+											joint1819_controller
+											
+											joint1920_controller
+											"/>
+
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+		respawn="false" output="screen">
+		<remap from="/joint_states" to="/slither/joint_states"/>
+	</node>
+</launch>

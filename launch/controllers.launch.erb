@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+	<rosparam file="$(find slither)/config/controllers.yaml" command="load"/>
+
+	<node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+		output="screen" ns="/slither" args="joint_state_controller
+											<%for i in 1..20%>
+											joint<%=i-1%><%=i%>_controller
+											<%end%>"/>
+
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
+		respawn="false" output="screen">
+		<remap from="/joint_states" to="/slither/joint_states"/>
+	</node>
+</launch>
